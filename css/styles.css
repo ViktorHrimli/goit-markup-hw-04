@@ -141,10 +141,10 @@ header {
 
 .adress-conteiner {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: 25px;
-  /* border: 2px solid navy; */
 }
 
 .page-nav {
@@ -156,11 +156,49 @@ header {
   color: var(--ithem-text-color);
 }
 
+.icon-link-mail::before {
+  display: inline-block;
+  content: '';
+  margin-right: 10px;
+  height: 16px;
+  width: 14px;
+  background-image: url(../imeges/mail.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.icon-link-phone::before {
+  display: inline-block;
+  content: '';
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  background-image: url(../imeges/smartphone.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+/* .icon-link-mail:hover,
+.icon-link-phone:hover .icon-link-mail:focus,
+.icon-link-phone:focus {
+  color: var(--button-color);
+} */
+
 /* Шапка */
 
 .section-hero {
   padding: 200px 0 200px;
   background-color: var(--background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imeges/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-all {
@@ -174,10 +212,6 @@ header {
   letter-spacing: 0.06em;
   margin-top: 0;
   margin-bottom: 30px;
-}
-
-.backgraund-hero {
-  background-color: #2f303a;
 }
 
 .button:hover,
@@ -248,6 +282,33 @@ header {
 
 .features-items:first-child {
   margin-left: 0;
+}
+
+.features-items::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.features-items:nth-child(1)::before {
+  background-image: url(../imeges/antenna.svg);
+}
+
+.features-items:nth-child(2)::before {
+  background-image: url(../imeges/clock.svg);
+}
+
+.features-items:nth-child(3)::before {
+  background-image: url(../imeges/diagram.svg);
+}
+
+.features-items:nth-child(4)::before {
+  background-image: url(../imeges/astronaut.svg);
 }
 
 .heading {
