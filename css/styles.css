@@ -116,6 +116,9 @@ header {
 }
 
 .nav-adress-ithem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-weight: 500;
   color: #757575;
   font-size: 14px;
@@ -156,35 +159,28 @@ header {
   color: var(--ithem-text-color);
 }
 
-.icon-link-mail::before {
-  display: inline-block;
-  content: '';
+.icon-mail {
+  justify-self: start;
   margin-right: 10px;
-  height: 16px;
-  width: 14px;
-  background-image: url(../imeges/mail.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  cursor: pointer;
+  fill: var(--ithem-text-color);
 }
 
-.icon-link-phone::before {
-  display: inline-block;
-  content: '';
-  margin-right: 10px;
-  width: 10px;
-  height: 16px;
-  background-image: url(../imeges/smartphone.svg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
+.icon-mail:hover {
+  fill: var(--button-color);
 }
 
-/* .icon-link-mail:hover,
-.icon-link-phone:hover .icon-link-mail:focus,
-.icon-link-phone:focus {
-  color: var(--button-color);
-} */
+.icon-phone {
+  justify-self: start;
+  margin-right: 10px;
+  cursor: pointer;
+  fill: var(--ithem-text-color);
+}
+
+.icon-phone:hover,
+.icon-phone:focus {
+  fill: var(--title-text-color);
+}
 
 /* Шапка */
 
@@ -253,7 +249,6 @@ header {
   font-weight: 500;
   font-size: 16px;
   color: #212121;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
   padding: 6px 22px;
@@ -411,6 +406,83 @@ header {
   letter-spacing: var(--letter-spacing);
 }
 
+.team-icon {
+  display: inline-flex;
+  height: 44px;
+  width: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 16px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+
+.team-icon {
+  fill: currentColor;
+}
+
+.team-icon:hover,
+.team-icon:focus {
+  background-color: var(--button-color);
+  color: #fff;
+}
+
+.team-icon:last-child {
+  margin-right: 0;
+}
+
+.social-team-icon {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  object-position: center;
+}
+
+/* НАШИ КЛИЕНТЫ */
+
+.section-clients {
+  padding-top: 94px;
+}
+
+.list-clients {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients {
+  margin-right: 30px;
+  fill: #afb1b8;
+}
+
+.clients:last-child {
+  margin-right: 0;
+}
+
+.client-icons {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.client-icons {
+  fill: currentColor;
+}
+
+.client-icons:focus,
+.client-icons:hover {
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
+}
+
 /* Подвал */
 
 .ithem-adress {
@@ -461,6 +533,24 @@ header {
   margin-top: 20px;
 }
 
+.join {
+  color: #fff;
+}
+
+.join-link {
+  background: rgba(255, 255, 255, 0.1);
+  fill: #fff;
+}
+
+.footer-backgraund {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-center {
+  margin-left: 100px;
+}
+
 /* Портфолио  */
 
 /* ФИЛЬТР КНОПОК */
@@ -497,9 +587,8 @@ header {
   line-height: 2;
   color: #212121;
   letter-spacing: 0.06em;
-  /* margin-top: 20px; */
+
   margin-bottom: 4px;
-  /* margin-left: 24px; */
 }
 
 .text-progects {
@@ -507,7 +596,6 @@ header {
   line-height: 1.87;
   color: #757575;
   letter-spacing: var(--letter-spacing);
-  /* margin-left: 24px; */
 }
 
 .list-progects {
@@ -517,7 +605,10 @@ header {
   margin-left: 30px;
   margin-bottom: 30px;
   text-align: left;
-  /* padding-bottom: 20px; */
+}
+.list-progects:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .list-progects:nth-child(3n + 1) {
